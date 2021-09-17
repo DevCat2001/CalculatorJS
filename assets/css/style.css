@@ -33,21 +33,29 @@ body{
     background: #222425;
     color: white;
     font-weight: bold;
+    min-height: 80px;
 }
 .data{
     width: 385px;
+}
+.sign-area{
+    font-size: medium;
+    padding-right: 15px;
 }
 button{
     width: 100px;
     height: 50px;
     font-size: x-large;
-    border: 1.7px solid --tertiary;
-    background: var(--primary-normal);
+    border: 1.7px solid lightgray;
     font-weight: 300;
     color: white;
 }
 button.type-a{
     background: orangered;
+}
+button.type-a:hover{
+    background: yellow;
+    color: #070707;
 }
 button.type-b{
     background: #141615;
