@@ -1,18 +1,31 @@
+:root{
+    --body-background: radial-gradient(circle, rgba(0,255,0,1) 0%, rgba(0,255,255,1) 100%);
+    --card-background: white;
+    --type-a: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(234,255,0,1) 100%);
+    --type-a-hover: radial-gradient(circle, rgba(234,255,0,1) 0%, rgba(255,0,0,1) 100%);
+    --type-b: purple;
+    --type-b-hover: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+    --type-c: black;
+    --type-c-hover: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    --view-area: linear-gradient(90deg, rgba(252,70,107,1) 0%, rgba(63,94,251,1) 51%);
+}
 *{
     margin: 0;
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
 body{
-    background: #202223;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--body-background);
 }
 .card{
-    background: #2d2f33;
-    padding: 40px 50px 70px;
-    border-radius: 5%;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 400px;
+    background: var(--card-background);
+    padding: 5px;
     -webkit-box-shadow: 50px 50px 35px 15px rgba(0,0,0,0.36);
     -moz-box-shadow: 50px 50px 35px 15px rgba(0,0,0,0.36);
     box-shadow: 50px 50px 35px 15px rgba(0,0,0,0.36);
@@ -30,7 +43,7 @@ body{
     font-size: xx-large;
     padding: 10px 0 25px;
     width: 400px;
-    background: #222425;
+    background: var(--view-area);
     color: white;
     font-weight: bold;
     min-height: 80px;
@@ -46,24 +59,29 @@ button{
     width: 100px;
     height: 50px;
     font-size: x-large;
-    border: 1.7px solid lightgray;
+    border: 1.71px solid var(--card-background);
     font-weight: 300;
     color: white;
 }
 button.type-a{
-    background: orangered;
+    background: var(--type-a);
 }
 button.type-a:hover{
-    background: yellow;
-    color: #070707;
+    background: var(--type-a-hover);
+    color: black;
 }
 button.type-b{
-    background: #141615;
+    background: var(--type-b);
+}
+button.type-b:hover{
+    background: var(--type-b-hover);
 }
 button.type-c{
-    background: #070707;
+    background: var(--type-c);
+}
+button.type-c:hover{
+    background: var(--type-c-hover);
 }
 button:hover{
     font-weight: bold;
-    background: #534E54;
 }
