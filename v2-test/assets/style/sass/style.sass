@@ -14,29 +14,36 @@ body
         display: flex
         flex-flow: column nowrap
         width: 360px
-        height: 450px
+        min-height: 450px
         .screen-area
             background: #424242
             color: #173a09
             font-size: large
             font-weight: 900
-            height: 90px
+            min-height: 90px
+            padding-top: 15px
+            padding-bottom: 15px
             display: flex
             justify-content: center
             align-items: center
             .screen
                 background: green
                 border-radius: 10px
-                padding-right: 10px
+                padding: 10px
                 width: 320px
-                height: 60px
+                min-height: 100px
                 display: flex
                 flex-direction: column
+                justify-content: space-between
                 .number-area,.sign-area
                     align-self: flex-end
                 .number-area
                     word-wrap: break-word
                     word-break: break-all
+                .sign-area
+                    border-radius: 50%
+                    border: solid yellow 0.002px
+                    padding: 5px 12px
         .key-area
             display: flex
             flex-direction: column

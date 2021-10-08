@@ -19,14 +19,16 @@ body .calculator {
   display: flex;
   flex-flow: column nowrap;
   width: 360px;
-  height: 450px;
+  min-height: 450px;
 }
 body .calculator .screen-area {
   background: #424242;
   color: #173a09;
   font-size: large;
   font-weight: 900;
-  height: 90px;
+  min-height: 90px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,11 +36,12 @@ body .calculator .screen-area {
 body .calculator .screen-area .screen {
   background: green;
   border-radius: 10px;
-  padding-right: 10px;
+  padding: 10px;
   width: 320px;
-  height: 60px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 body .calculator .screen-area .screen .number-area, body .calculator .screen-area .screen .sign-area {
   align-self: flex-end;
@@ -46,6 +49,11 @@ body .calculator .screen-area .screen .number-area, body .calculator .screen-are
 body .calculator .screen-area .screen .number-area {
   word-wrap: break-word;
   word-break: break-all;
+}
+body .calculator .screen-area .screen .sign-area {
+  border-radius: 50%;
+  border: solid yellow 0.002px;
+  padding: 5px 12px;
 }
 body .calculator .key-area {
   display: flex;
